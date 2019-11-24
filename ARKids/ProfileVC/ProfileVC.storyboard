@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hpD-r2-7CS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="y1N-As-fLQ">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" extendedLayoutIncludesOpaqueBars="YES" id="hpD-r2-7CS" customClass="ProfileViewController" customModule="ARKids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVC-Fq-3NO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="whE-Iq-oci">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" red="0.24102967980000001" green="0.2913413346" blue="0.71504592899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHB-fS-fb9">
+                                <rect key="frame" x="16" y="782" width="382" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Interaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOs-ev-pic">
+                                        <rect key="frame" x="139.5" y="16.5" width="153.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ar" translatesAutoresizingMaskIntoConstraints="NO" id="e5g-E0-bCO">
+                                        <rect key="frame" x="82.5" y="7.5" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Y3c-wM-9KF"/>
+                                            <constraint firstAttribute="width" constant="45" id="pAR-FA-A3g"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84209034974093266" green="0.80427789934706029" blue="0.31154291005294893" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="YOs-ev-pic" firstAttribute="centerX" secondItem="vHB-fS-fb9" secondAttribute="centerX" constant="25" id="G1o-Q5-ghB"/>
+                                    <constraint firstItem="e5g-E0-bCO" firstAttribute="centerY" secondItem="YOs-ev-pic" secondAttribute="centerY" id="cyH-Ko-ekS"/>
+                                    <constraint firstItem="YOs-ev-pic" firstAttribute="leading" secondItem="e5g-E0-bCO" secondAttribute="trailing" constant="12" id="des-yV-ddx"/>
+                                    <constraint firstAttribute="height" constant="60" id="mfY-rv-5wM"/>
+                                    <constraint firstItem="YOs-ev-pic" firstAttribute="centerY" secondItem="vHB-fS-fb9" secondAttribute="centerY" id="qPC-MN-w1P"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b9-D9-wip">
+                                <rect key="frame" x="16" y="782" width="382" height="60"/>
+                                <connections>
+                                    <action selector="didTapARButton:" destination="hpD-r2-7CS" eventType="touchUpInside" id="qid-q8-BWu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24102967980000001" green="0.2913413346" blue="0.71504592899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3b9-D9-wip" firstAttribute="top" secondItem="vHB-fS-fb9" secondAttribute="top" id="3U3-hV-cqY"/>
+                            <constraint firstItem="3b9-D9-wip" firstAttribute="bottom" secondItem="vHB-fS-fb9" secondAttribute="bottom" id="55y-Vx-iB8"/>
+                            <constraint firstItem="whE-Iq-oci" firstAttribute="leading" secondItem="ezZ-hr-pSx" secondAttribute="leading" id="KgU-e5-lR4"/>
+                            <constraint firstItem="whE-Iq-oci" firstAttribute="bottom" secondItem="ezZ-hr-pSx" secondAttribute="bottom" id="STr-1E-RKE"/>
+                            <constraint firstItem="whE-Iq-oci" firstAttribute="top" secondItem="yVC-Fq-3NO" secondAttribute="top" id="ShR-mO-Xi9"/>
+                            <constraint firstItem="3b9-D9-wip" firstAttribute="leading" secondItem="vHB-fS-fb9" secondAttribute="leading" id="U4U-VQ-soW"/>
+                            <constraint firstItem="ezZ-hr-pSx" firstAttribute="trailing" secondItem="vHB-fS-fb9" secondAttribute="trailing" constant="16" id="XYt-FL-m5Q"/>
+                            <constraint firstItem="vHB-fS-fb9" firstAttribute="leading" secondItem="ezZ-hr-pSx" secondAttribute="leading" constant="16" id="g6v-k8-347"/>
+                            <constraint firstItem="whE-Iq-oci" firstAttribute="trailing" secondItem="ezZ-hr-pSx" secondAttribute="trailing" id="l9I-Gg-PRt"/>
+                            <constraint firstItem="ezZ-hr-pSx" firstAttribute="bottom" secondItem="vHB-fS-fb9" secondAttribute="bottom" constant="20" id="pGN-8a-grq"/>
+                            <constraint firstItem="3b9-D9-wip" firstAttribute="trailing" secondItem="vHB-fS-fb9" secondAttribute="trailing" id="xO8-Pk-XhJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ezZ-hr-pSx"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="vHB-fS-fb9" id="Ap6-D7-jax"/>
+                        <outlet property="tableView" destination="whE-Iq-oci" id="dG8-zw-68I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adJ-DK-XEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ar" width="256" height="256"/>
+    </resources>
+</document>

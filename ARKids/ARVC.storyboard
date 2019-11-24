@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARVC-->
+        <scene sceneID="bMU-XW-iQz">
+            <objects>
+                <viewController storyboardIdentifier="ARVC" id="t9M-Db-TD4" customClass="ARVC" customModule="ARKids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTf-t1-zMY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k23-Hs-HDR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54H-3g-hN8">
+                                <rect key="frame" x="16" y="791" width="382" height="55"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.16078431369999999" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="rCS-qg-CmN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Boost for 100$">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapOnBoost:" destination="t9M-Db-TD4" eventType="touchUpInside" id="HeE-fg-hWV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Esx-2p-X9Z" firstAttribute="trailing" secondItem="54H-3g-hN8" secondAttribute="trailing" constant="16" id="B0T-Kb-0i6"/>
+                            <constraint firstItem="Esx-2p-X9Z" firstAttribute="bottom" secondItem="54H-3g-hN8" secondAttribute="bottom" constant="16" id="HUa-de-usT"/>
+                            <constraint firstItem="54H-3g-hN8" firstAttribute="leading" secondItem="Esx-2p-X9Z" secondAttribute="leading" constant="16" id="KTZ-aH-kc8"/>
+                            <constraint firstItem="k23-Hs-HDR" firstAttribute="leading" secondItem="Esx-2p-X9Z" secondAttribute="leading" id="L3t-NU-h8a"/>
+                            <constraint firstItem="k23-Hs-HDR" firstAttribute="top" secondItem="mTf-t1-zMY" secondAttribute="top" id="TCb-vd-MNW"/>
+                            <constraint firstAttribute="bottom" secondItem="k23-Hs-HDR" secondAttribute="bottom" id="ZeC-Ic-BRu"/>
+                            <constraint firstItem="Esx-2p-X9Z" firstAttribute="trailing" secondItem="k23-Hs-HDR" secondAttribute="trailing" id="fzr-01-XqL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Esx-2p-X9Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="boostButton" destination="54H-3g-hN8" id="E37-ha-EhD"/>
+                        <outlet property="sceneView" destination="k23-Hs-HDR" id="Y0L-bC-OKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvY-Qy-yHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113.04347826086958" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+</document>

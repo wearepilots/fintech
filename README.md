@@ -1,2 +1,0 @@
-# TinkoffFintech
-Testing app

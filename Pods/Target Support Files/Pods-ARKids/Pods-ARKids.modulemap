@@ -1,0 +1,6 @@
+module Pods_ARKids {
+  umbrella header "Pods-ARKids-umbrella.h"
+
+  export *
+  module * { export * }
+}

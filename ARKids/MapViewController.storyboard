@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Z9-hn-sx4">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="WiU-Jd-AhY">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="V5p-Zw-fda" customClass="MapViewController" customModule="ARKids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Miy-Bq-KbG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-sg-9Tl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="X8C-sg-9Tl" secondAttribute="bottom" id="9mw-uQ-n0W"/>
+                            <constraint firstItem="dxs-hS-2AP" firstAttribute="trailing" secondItem="X8C-sg-9Tl" secondAttribute="trailing" id="OdC-Oe-lvn"/>
+                            <constraint firstItem="X8C-sg-9Tl" firstAttribute="top" secondItem="Miy-Bq-KbG" secondAttribute="top" id="sPd-5t-VGA"/>
+                            <constraint firstItem="X8C-sg-9Tl" firstAttribute="leading" secondItem="dxs-hS-2AP" secondAttribute="leading" id="yaW-go-Z2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dxs-hS-2AP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WZ8-cu-ygu"/>
+                    <connections>
+                        <outlet property="mapView" destination="X8C-sg-9Tl" id="pss-1B-aHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpn-qn-y0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004.3478260869566" y="-101.11607142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="16w-dn-Y7l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Z9-hn-sx4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dUU-f3-kiK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V5p-Zw-fda" kind="relationship" relationship="rootViewController" id="BIA-ia-Nz5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="417-EP-XFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94.20289855072464" y="-101.11607142857143"/>
+        </scene>
+    </scenes>
+</document>
