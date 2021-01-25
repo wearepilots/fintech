@@ -11,7 +11,6 @@ import XCTest
 class ARKidsUITests: XCTestCase {
 
     func testCaseOne() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
         XCTAssertTrue(app.tables/*@START_MENU_TOKEN@*/.staticTexts["Doctor"]/*[[".cells.staticTexts[\"Doctor\"]",".staticTexts[\"Doctor\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
@@ -19,7 +18,5 @@ class ARKidsUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Profile"].buttons["Back"].exists)
         app.navigationBars["Profile"].buttons["Back"].tap()
         }
-
-    
             }
         
